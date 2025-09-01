@@ -1,0 +1,530 @@
+{% include "core/header.html" %}
+{% load static %}
+
+        <div class="wrapper_inner clearfix clear" id="startcontent">
+            <!-- start fullwidth -->
+
+            <div class="hero-banner-2023 contentdeck two-column-text-image deck-image-overlap  txt-dark  photo-align-left">
+                <div class="clearfix">
+                    <div class="deckinner deck-distinct no-padding-top  txt-dark">
+                        <div class=" multicol2">
+                            <div class="multicol-inner fix">
+                                <div class="overlap-img overlap-1"><img src="{% static 'assetzz/content/images/700/Contact-Us---Americas-Banner.jpg' %}" alt="" loading="lazy"></div>
+                                <div class="overlap-img overlap-2"><img src="{% static 'assetzz/content/images/700/Contact-Us---Americas-Banner-2_1.jpg' %}" alt="" loading="lazy"></div>
+                                <div class="overlap-mini-square bg-color-maroon txt-light">
+                                    <div class="mini-text medium">
+                                        How can we help you?
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="multicol1">
+                            <div class="multicol-inner inner fix">
+
+<div class="contact-form-container">
+    <div class="contact-form-wrapper">
+        <div class="form-header">
+            <h3 class="contact-form-title">Get in Touch</h3>
+            <p class="contact-form-subtitle">We're all ears for your thoughts!</p>
+        </div>
+        <form class="contact-form" action="" method="post" name="mainform" onsubmit="return checkform()">
+            {% csrf_token %}
+            <input type="hidden" name="form_id" value="16786256681902">
+            <input type="hidden" name="form_token" value="a6e0527d1b50bd5097dc0a56d447f391">
+            <input type="hidden" name="a" value="support">
+            <input type="hidden" name="action" value="send">
+
+            <div class="form-group">
+                <div class="input-wrapper">
+                    <input type="text" id="{{ form.name.id_for_label }}" name="{{ form.name.html_name }}" required>
+                    <label for="{{ form.name.id_for_label }}">Your Name</label>
+                    <i class="fas fa-user"></i>
+                </div>
+                <div class="form-hint">How should we address you?</div>
+            </div>
+
+            <div class="form-group">
+                <div class="input-wrapper">
+                    <input type="email" id="{{ form.email.id_for_label }}" name="{{ form.email.html_name }}" required>
+                    <label for="{{ form.email.id_for_label }}">Your Email</label>
+                    <i class="fas fa-envelope"></i>
+                </div>
+                <div class="form-hint">We respect your privacy</div>
+            </div>
+
+            <div class="form-group">
+                <div class="input-wrapper">
+                    <textarea id="{{ form.message.id_for_label }}" name="{{ form.message.html_name }}" required></textarea>
+                    <label for="{{ form.message.id_for_label }}">Your Message</label>
+                    <i class="fas fa-comment"></i>
+                </div>
+                <div class="form-hint">What's on your mind?</div>
+            </div>
+
+            <div class="form-actions">
+                <button type="submit" class="btn-submit">
+                    <span class="btn-text">Send Message</span>
+                    <span class="btn-icon"><i class="fas fa-paper-plane"></i></span>
+                </button>
+            </div>
+
+            <div class="form-footer">
+                <a href="{% url 'home' %}" class="home-link">
+                    <i class="fas fa-home"></i> Return to Homepage
+                </a>
+            </div>
+        </form>
+    </div>
+</div>
+
+<style>
+    @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap');
+
+    :root {
+        --primary-color: #126E82;
+        --secondary-color: #51a3b8;
+        --text-color: #333;
+        --hint-color: #6c757d;
+        --bg-color: #f6f9fc;
+        --input-bg: #ffffff;
+        --input-border: #e0e0e0;
+        --input-focus-border: #126E82;
+        --input-focus-shadow: rgba(18, 110, 130, 0.1);
+    }
+
+    .contact-form-container {
+        max-width: 550px;
+        margin: 40px auto;
+        padding: 40px;
+        background: linear-gradient(135deg, var(--bg-color) 0%, #ffffff 100%);
+        border-radius: 20px;
+        box-shadow: 0 20px 60px rgba(0, 0, 0, 0.1), 0 1px 2px rgba(0, 0, 0, 0.05);
+        font-family: 'Poppins', sans-serif;
+        position: relative;
+        overflow: hidden;
+    }
+
+    .contact-form-wrapper {
+        position: relative;
+        z-index: 1;
+    }
+
+    .form-header {
+        text-align: center;
+        margin-bottom: 30px;
+    }
+
+    .contact-form-title {
+        font-size: 32px;
+        color: var(--primary-color);
+        margin-bottom: 10px;
+        font-weight: 600;
+    }
+
+    .contact-form-subtitle {
+        font-size: 16px;
+        color: var(--hint-color);
+        margin-bottom: 25px;
+    }
+
+    .contact-form .form-group {
+        margin-bottom: 30px;
+        position: relative;
+    }
+
+    .input-wrapper {
+        position: relative;
+    }
+
+    .contact-form input,
+    .contact-form textarea {
+        width: 100%;
+        padding: 15px 20px;
+        border: 2px solid var(--input-border);
+        border-radius: 12px;
+        background-color: var(--input-bg);
+        font-size: 16px;
+        transition: all 0.3s ease;
+        color: var(--text-color);
+    }
+
+    .contact-form textarea {
+        height: 150px;
+        resize: vertical;
+    }
+
+    .contact-form input:focus,
+    .contact-form textarea:focus {
+        outline: none;
+        border-color: var(--input-focus-border);
+        box-shadow: 0 0 0 4px var(--input-focus-shadow);
+    }
+
+    .contact-form label {
+        position: absolute;
+        left: 15px;
+        top: 50%;
+        transform: translateY(-50%);
+        font-size: 16px;
+        color: var(--hint-color);
+        transition: all 0.3s ease;
+        pointer-events: none;
+        padding: 0 5px;
+        background-color: var(--input-bg);
+    }
+
+    .contact-form textarea + label {
+        top: 20px;
+        transform: none;
+    }
+
+    .contact-form input:focus ~ label,
+    .contact-form textarea:focus ~ label,
+    .contact-form input:not(:placeholder-shown) ~ label,
+    .contact-form textarea:not(:placeholder-shown) ~ label {
+        top: 0;
+        font-size: 12px;
+        color: var(--primary-color);
+        font-weight: 500;
+    }
+
+    .contact-form .input-wrapper i {
+        position: absolute;
+        top: 50%;
+        right: 15px;
+        transform: translateY(-50%);
+        color: var(--primary-color);
+        font-size: 18px;
+        transition: all 0.3s ease;
+    }
+
+    .contact-form textarea + i {
+        top: 20px;
+        transform: none;
+    }
+
+    .form-hint {
+        font-size: 12px;
+        color: var(--hint-color);
+        margin-top: 5px;
+        margin-left: 15px;
+    }
+
+    .form-actions {
+        text-align: center;
+    }
+
+    .btn-submit {
+        background: linear-gradient(45deg, var(--primary-color), var(--secondary-color));
+        color: #fff;
+        border: none;
+        padding: 15px 40px;
+        font-size: 18px;
+        border-radius: 50px;
+        cursor: pointer;
+        transition: all 0.3s ease;
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        overflow: hidden;
+        position: relative;
+    }
+
+    .btn-submit:hover {
+        transform: translateY(-3px);
+        box-shadow: 0 7px 20px rgba(18, 110, 130, 0.3);
+    }
+
+    .btn-submit:active {
+        transform: translateY(-1px);
+    }
+
+    .btn-text {
+        z-index: 1;
+        transition: all 0.3s ease;
+    }
+
+    .btn-icon {
+        position: absolute;
+        right: -30px;
+        transition: all 0.3s ease;
+        opacity: 0;
+    }
+
+    .btn-submit:hover .btn-text {
+        transform: translateX(-15px);
+    }
+
+    .btn-submit:hover .btn-icon {
+        right: 20px;
+        opacity: 1;
+    }
+
+    .form-footer {
+        text-align: center;
+        margin-top: 30px;
+    }
+
+    .home-link {
+        color: var(--primary-color);
+        text-decoration: none;
+        font-size: 16px;
+        transition: all 0.3s ease;
+        display: inline-flex;
+        align-items: center;
+    }
+
+    .home-link i {
+        margin-right: 5px;
+    }
+
+    .home-link:hover {
+        color: var(--secondary-color);
+        transform: translateY(-2px);
+    }
+
+    .contact-form-container::before,
+    .contact-form-container::after {
+        content: '';
+        position: absolute;
+        width: 300px;
+        height: 300px;
+        border-radius: 50%;
+        background: linear-gradient(135deg, rgba(18, 110, 130, 0.1), rgba(18, 110, 130, 0.05));
+        z-index: 0;
+    }
+
+    .contact-form-container::before {
+        top: -150px;
+        left: -150px;
+        animation: float 6s ease-in-out infinite;
+    }
+
+    .contact-form-container::after {
+        bottom: -150px;
+        right: -150px;
+        animation: float 8s ease-in-out infinite;
+    }
+
+    @keyframes float {
+        0% { transform: translateY(0px) rotate(0deg); }
+        50% { transform: translateY(-20px) rotate(5deg); }
+        100% { transform: translateY(0px) rotate(0deg); }
+    }
+
+    .error-message {
+        color: #ff4136;
+        font-size: 12px;
+        margin-top: 5px;
+        margin-left: 15px;
+    }
+
+    @media (max-width: 600px) {
+        .contact-form-container {
+            padding: 30px 20px;
+        }
+        
+        .contact-form-title {
+            font-size: 28px;
+        }
+        
+        .contact-form input,
+        .contact-form textarea {
+            font-size: 14px;
+        }
+        
+        .btn-submit {
+            padding: 12px 30px;
+            font-size: 16px;
+        }
+    }
+</style>
+
+<script>
+    function checkform() {
+        const form = document.mainform;
+        const fields = ['name', 'email', 'message'];
+        const messages = {
+            'name': "Please enter your full name.",
+            'email': "Please enter a valid email address.",
+            'message': "Please type your message."
+        };
+
+        let isValid = true;
+
+        for (let field of fields) {
+            if (form[field].value.trim() === '') {
+                showError(form[field], messages[field]);
+                isValid = false;
+            } else {
+                clearError(form[field]);
+            }
+        }
+
+        // Email validation
+        const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+        if (!emailRegex.test(form.email.value.trim())) {
+            showError(form.email, "Please enter a valid email address.");
+            isValid = false;
+        }
+
+        return isValid;
+    }
+
+    function showError(input, message) {
+        const formGroup = input.closest('.form-group');
+        let error = formGroup.querySelector('.error-message');
+        if (!error) {
+            error = document.createElement('div');
+            error.className = 'error-message';
+            formGroup.appendChild(error);
+        }
+        error.textContent = message;
+        input.classList.add('error');
+    }
+
+    function clearError(input) {
+        const formGroup = input.closest('.form-group');
+        const error = formGroup.querySelector('.error-message');
+        if (error) {
+            formGroup.removeChild(error);
+        }
+        input.classList.remove('error');
+    }
+
+    document.querySelectorAll('.contact-form input, .contact-form textarea').forEach(input => {
+        input.addEventListener('focus', () => {
+            input.closest('.form-group').classList.add('focused');
+        });
+        input.addEventListener('blur', () => {
+            if (input.value === '') {
+                input.closest('.form-group').classList.remove('focused');
+            }
+        });
+        // Set initial state
+        if (input.value !== '') {
+            input.closest('.form-group').classList.add('focused');
+        }
+    });
+</script>
+
+                            </div>
+                            <div class="clear"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="page-inner fix">
+                <!--content column-->
+                <div class="onewhole left">
+                    <div class="inner">
+                        <div id="page-content" class="content content1 cimg-container">
+                            <h1 class="page-title just-sr">Contact Us</h1>
+
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="clear"></div>
+
+            <div class="onewhole left">
+                <div class="decks fix clear">
+                    <div class="content content2 fix clear cimg-container">
+                        <p>
+                            <div class="contentdeck two-column-text-image bg-color-icyblue txt-dark  photo-align-right reverse-boxed-deck image-silhouette">
+                                <div class="clearfix">
+                                    <div class="deckinner deck-distinct  bg-color-icyblue txt-dark">
+                                        <div class=" multicol2">
+                                            <div class="multicol-inner fix">
+
+                                                <div class="feature-img"><img src="{% static 'assetzz/content/images/original/Contact-Us-Page---Call-Us.png' %}" alt="" loading="lazy"></div>
+
+
+                                            </div>
+                                        </div>
+                                        <div class="multicol1">
+                                            <div class="multicol-inner inner fix">
+
+                                                <div class="deck-title  lexend" role="heading">Call Us</div>
+
+
+
+                                                <p style="text-align: left;"><strong>We can be reached by phone:<br /></strong>Monday - Friday: 8:00 a.m. - 6:00 p.m.<br />Saturday: 9:00 a.m. - Noon</p>
+                                                <p>Toll Free: <a href="tel:972-494-5328" data-linktype="ext">1-888-742-6551</a></p>
+                                                <p style="text-align: left;">Local: <a href="tel:972-494-5328" data-linktype="ext">214-742-6551</a></p>
+                                                <p>
+                                                    <div class="cta"><a href="/html/location" class="button button4 " data-perstag="" data-bid="124">See All Locations</a></div>
+                                                </p>
+
+                                            </div>
+                                            <div class="clear"></div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </p>
+                        <p>
+                            <div class="contentdeck bg-color-transparent txt-dark  boxed-deck  onewhole    fix clear">
+                                <div class="banner-overlay clearfix">
+                                    <div class="deckinner fix " style="margin:auto;">
+                                        <div class="multicol-inner txt-dark">
+                                            <div class="deck-title h2-style  txt-left txt-dark " role="heading" aria-level="2">MORE WAYS TO CONTACT US</div>
+
+
+                                            <div class="multicol-intro fix">
+                                                <p style="text-align: left;"><span class="intro">We have multiple options that allow our members to easily get in touch with us!</span></p>
+                                                <h3 style="text-align: left;"><span class="lexend-light">Message Us</span></h3>
+                                                <p style="text-align: left;"><strong>Monday - Friday: 8:00 a.m. - 6:00 p.m.<br />Saturday: 9:00 a.m. - Noon</strong></p>
+                                                <p style="text-align: left;">Have questions on your account?&nbsp; Send us a message in <a  data-linktype="ext">LIVE CHAT SUPPORT</a> and we will reach out to you during normal business
+                                                    hours.&nbsp; We can't wait to connect!</p>
+                                                <h3 style="text-align: left;"><span class="lexend-light">Mailing Address</span></h3>
+                                                <p style="text-align: left;">America's Credit Union<br />PO Box 671149<br />Dallas, TX 75367</p>
+                                                <h3 style="text-align: left;"><span class="lexend-light">Bank by Phone Banking</span></h3>
+                                                <p style="text-align: left;">America's CU members can access their account information by phone.&nbsp;&nbsp;</p>
+                                                <p style="text-align: left;">Toll Free: 1-888-742-6551<br />Local: 214-742-6551<br /><br /></p>
+                                                <p style="text-align: left;">After selecting your preferred language, press 2 to access Telephone Teller.</p>
+                                                <p style="text-align: left;">Review America's CU&nbsp;<a href="https://www.americascu.org/content/docs/Telephone-Teller-and-Banking-Online-access-request-1.pdf" data-linktype="doc">Telephone Teller Disclosure.</a></p>
+                                                <h3 style="text-align: left;"><span class="lexend-light">Report Lost or Stolen VISA&reg; Debit &amp; Credit Cards</span></h3>
+                                                <p style="text-align: left;">To report a lost or stolen America's Credit Union VISA&reg; Debit or Credit Card, please chat us here directly as soon as possible.</p>
+                                                <h3 style="text-align: left;"><span class="lexend-light">Activation and PIN Management</span></h3>
+                                                <p style="text-align: left;">In the US: 800-290-7893<br />Outside the US: 206-624-7998</p>
+                                            </div>
+                                            <div class="clear"></div>
+
+
+
+
+
+
+                                            <div class="clear"></div>
+
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="page-inner fix">
+                <div class=" content content3 fix clear cimg-container">
+                    <div class="inner">
+
+
+                    </div>
+                </div>
+            </div>
+
+
+            <!-- end fullwidth -->
+        </div>
+        <!--end wrapper_inner-->
+    </div>
+
+
+{% include "core/footer.html" %}
