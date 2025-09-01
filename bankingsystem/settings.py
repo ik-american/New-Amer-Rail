@@ -12,7 +12,7 @@ import os
 import certifi
 os.environ['SSL_CERT_FILE'] = certifi.where()
 CSRF_TRUSTED_ORIGINS = [
-    "https://web-production-6420a.up.railway.app",
+    "https://new-amer-rail-production.up.railway.app",
     "https://www.americanunions-credit.online"
 ]
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
