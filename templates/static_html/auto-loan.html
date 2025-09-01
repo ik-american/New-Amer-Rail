@@ -1,0 +1,456 @@
+{% include "core/header.html" %}
+{% load static %}
+
+        <div class="wrapper_inner clearfix clear" id="startcontent">
+            <!-- start fullwidth -->
+
+            <div class="hero-banner-2023 contentdeck two-column-text-image deck-image-overlap bg-color-transparent txt-dark  photo-align-left">
+                <div class="clearfix">
+                    <div class="deckinner deck-distinct  bg-color-transparent txt-dark">
+                        <div class=" multicol2">
+                            <div class="multicol-inner fix">
+                                <div class="overlap-img overlap-1"><img src="{% static 'assetzz/content/images/700/auto-loans---banner-image-1.jpg' %}" alt="" loading="lazy"></div>
+                                <div class="overlap-img overlap-2"><img src="{% static 'assetzz/content/images/700/Americas-CU-7.jpg' %}" alt="" loading="lazy"></div>
+                                <div class="overlap-mini-square bg-color-red txt-light">
+                                    <div class="mini-text large">
+                                        4.69% APR
+                                        <sup><a class="footnote-link" href="#ftnt-1" id="fnref-1" data-fnid="ftnt-1" aria-label="link to footnote number 1">1</a></sup>
+                                        <span class="minibutton-trailing">As low as</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="multicol1">
+                            <div class="multicol-inner inner fix">
+
+                                <h2 class="deck-title h1-style">Car & Truck Loans</h2>
+
+
+
+                                <p><span class="intro">Make your commute better with a customized car or truck loan. </span></p>
+                                <p>Whether you are trading up, buying, or just wanting to lower your current payment and rate, we will steer you in the right direction.</p>
+                                <p>We offer competitive rates and personalized payments that put you in control of your money, so you can keep your eyes on the road! If green is your thing, we finance hybrids and EVs, too!</p>
+                                <ul style="list-style-type: LogoList;">
+                                    <li>Great low rates</li>
+                                    <li>Customized payment and term options to fit your budget</li>
+                                    <li>Easy and secure application process</li>
+                                    <li>No payments for up to 90 days</li>
+                                </ul>
+                                <p><a href="{% url 'accounts:login' %}" class="button button2 JQnewWindow" data-linktype="ext">Apply for an Auto Loan</a><span class="small"></span></p>
+
+                            </div>
+                            <div class="clear"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="page-inner fix">
+                <!--content column-->
+                <div class="onewhole left">
+                    <div class="inner">
+                        <div id="page-content" class="content content1 cimg-container">
+                            <h1 class="page-title just-sr">Car & Truck Loans</h1>
+
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="clear"></div>
+
+            <div class="onewhole left">
+                <div class="decks fix clear">
+                    <div class="content content2 fix clear cimg-container">
+                        <p>
+                            <div class="contentdeck bg-color-transparent txt-dark    onewhole    fix clear" id="auto">
+                                <div class="banner-overlay clearfix">
+                                    <div class="deckinner fix no-padding" style="margin:auto;">
+                                        <div class="multicol-inner txt-dark">
+
+                                            <div class="multicol-intro fix">
+                                                <p>
+                                                    <script src="{% static 'assetzz/scripts/CalcPayments_auto.js' %}" type="text/javascript"></script>
+
+                                                    <h2 class="calc-title txt-center" id="car-calc-label">Calculate your auto loan payment</h2>
+                                                    <div class="calc-container auto auto-calc-v2">
+                                                        <div class="calc-form">
+
+                                                            <div class="calc-block calc-block-input">
+                                                                <div id="cal_amt_error" class="calc-error hide" style="display:none"><i class="fa fa-exclamation-triangle 2x"> </i> Please enter a numeric loan amount like "24000" or "24,000" </div>
+                                                                <div class="calc-smalltitle">New Vehicle Purchase Price</div>
+                                                                <div> <a class="calc-button fa fa-minus 2x" href="javascript:void(0);" onclick="cal_chgAmount('-');"><span class="just-sr">minus</span> </a>
+                                                                    <label for="cal_amt" class="just-sr">Vehicle Cost</label>
+                                                                    <input id="cal_amt" value="20000" type="tel" data-initval="20000">
+                                                                    <a class="calc-button fa fa-plus 2x" href="javascript:void(0);" onclick="cal_chgAmount('+');"><span class="just-sr">plus</span> </a> </div>
+
+                                                                <div id="cal_amt_error2" class="calc-error2 hide" style="display:none"><i class="fa fa-exclamation-triangle 2x"> </i> Please enter a numeric down payment amount like "1000" or "1,000"
+                                                                </div>
+                                                            </div>
+
+                                                            <div class="calc-block calc-block-term">
+                                                                <div id="LoanTermLabel" class="calc-smalltitle">Loan Term (Months)</div>
+
+                                                                <div class="progress" style="height: 10px">
+                                                                    <div id="termbar" class="progress-bar" role="progressbar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="9"></div>
+                                                                </div>
+
+                                                                <div class="calc-term">
+
+                                                                    <input type="radio" id="numMonths01" class="btn-check" name="numMonths" value="24" checked data-apr="4.69%" onchange="initcalc();recalc();" aria-labelledby="LoanTermLabel 24MonthTermLabel">                                                                    <label class="btn btn-outline-primary" for="numMonths01" id="24MonthTermLabel">24</label>
+                                                                    <input type="radio" id="numMonths02" class="btn-check" name="numMonths" value="36" data-apr="5.19%" onchange="initcalc();recalc();" aria-labelledby="LoanTermLabel 36MonthTermLabel">
+                                                                    <label
+                                                                        class="btn btn-outline-primary" for="numMonths02" id="36MonthTermLabel">36</label>
+                                                                        <input type="radio" id="numMonths03" class="btn-check" name="numMonths" value="48" data-apr="5.39%" onchange="initcalc();recalc();" aria-labelledby="LoanTermLabel 48MonthTermLabel">                                                                        <label class="btn btn-outline-primary" for="numMonths03" id="48MonthTermLabel">48</label>
+                                                                        <input type="radio" id="numMonths04" class="btn-check" name="numMonths" value="60" data-apr="5.84%" onchange="initcalc();recalc();" aria-labelledby="LoanTermLabel 60MonthTermLabel">                                                                        <label class="btn btn-outline-primary" for="numMonths04" id="60MonthTermLabel">60</label>
+                                                                        <input type="radio" id="numMonths05" class="btn-check" name="numMonths" value="72" data-apr="6.44%" onchange="initcalc();recalc();" aria-labelledby="LoanTermLabel 72MonthTermLabel">                                                                        <label class="btn btn-outline-primary" for="numMonths05" id="72MonthTermLabel">72</label>
+                                                                        <input type="radio" id="numMonths06" class="btn-check" name="numMonths" value="84" data-apr="6.89%" onchange="initcalc();recalc();" aria-labelledby="LoanTermLabel 84MonthTermLabel">                                                                        <label class="btn btn-outline-primary" for="numMonths06" id="84MonthTermLabel">84</label>
+                                                                </div>
+
+
+                                                            </div>
+
+                                                            <div class="calc-block calc-block-input">
+                                                                <div class="calc-smalltitle">Down Payment Amount</div>
+                                                                <a class="calc-button fa fa-minus 2x" href="javascript:void(0);" onclick="cal_chgAmount2('-');"><span class="just-sr">minus</span> </a>
+                                                                <label for="cal_amt2" class="just-sr">Down Payment Amount</label>
+                                                                <input id="cal_amt2" value="1500" type="tel" data-initval="1500">
+                                                                <a class="calc-button fa fa-plus 2x" href="javascript:void(0);" onclick="cal_chgAmount2('+');"><span class="just-sr">plus</span> </a>
+                                                            </div>
+                                                        </div>
+                                                        <div class="calc-results-box">
+                                                            <div class="txt-dark">
+                                                                <div class="calc-smalltitle" id="TotalCost">Loan Amount: $
+                                                                    <div class="calc-subtotal"></div>
+                                                                </div>
+                                                                Your Estimated Monthly Payment:
+                                                                <div class="calc-largetitle" id="TotalPayment">$</div>
+                                                            </div>
+                                                            <!--  
+  <div class="calc-results clearfix" >
+    <div class="calc-results-title">24 months</div>
+    <div class="calc-results-display" id="cal_LoanAmount1">Payment Amount</div>
+
+    <div style="display:none;" data-carloanform="1" ></div>
+  </div>
+  <input type="hidden" id="cal_LoanRate1" value="4.69%">
+  <input type="hidden" id="cal_LoanTerm1" value="24">
+  [IFNOTBLANK:BIT_FIELD_C2ENABLE]
+  <div class="calc-results clearfix" >
+    <div class="calc-results-title">36</div>
+    <div class="calc-results-display" id="cal_LoanAmount2">Payment Amount</div>
+
+    <div style="display:none;" data-carloanform="2"></div>
+  </div>
+  <input type="hidden" id="cal_LoanRate2" value="5.19%">
+  <input type="hidden" id="cal_LoanTerm2" value="36">
+  [/IFNOTBLANK:BIT_FIELD_C2ENABLE]
+  
+  [IFNOTBLANK:BIT_FIELD_C3ENABLE]
+  <div class="calc-results clearfix">
+    <div class="calc-results-title">48 months</div>
+    <div class="calc-results-display" id="cal_LoanAmount3">Payment Amount</div>
+
+    <div style="display:none;" data-carloanform="3"></div>
+  </div>
+  <input type="hidden" id="cal_LoanRate3" value="5.39%">
+  <input type="hidden" id="cal_LoanTerm3" value="48">
+  [/IFNOTBLANK:BIT_FIELD_C3ENABLE] 
+  
+    [IFNOTBLANK:BIT_FIELD_C4ENABLE]
+  <div class="calc-results clearfix">
+    <div class="calc-results-title">60 months</div>
+    <div class="calc-results-display" id="cal_LoanAmount4">Payment Amount</div>
+
+    <div style="display:none;" data-carloanform="4"></div>
+  </div>
+  <input type="hidden" id="cal_LoanRate4" value="5.84%">
+  <input type="hidden" id="cal_LoanTerm4" value="60">
+  [/IFNOTBLANK:BIT_FIELD_C4ENABLE] 
+  
+    [IFNOTBLANK:BIT_FIELD_C5ENABLE]
+  <div class="calc-results clearfix">
+    <div class="calc-results-title">72 months</div>
+    <div class="calc-results-display" id="cal_LoanAmount5">Payment Amount</div>
+
+    <div style="display:none;" data-carloanform="5"></div>
+  </div>
+  <input type="hidden" id="cal_LoanRate5" value="6.44%">
+  <input type="hidden" id="cal_LoanTerm5" value="72">
+  [/IFNOTBLANK:BIT_FIELD_C5ENABLE] 
+
+    [IFNOTBLANK:BIT_FIELD_C6ENABLE]
+  <div class="calc-results clearfix">
+    <div class="calc-results-title">84 months</div>
+    <div class="calc-results-display" id="cal_LoanAmount6">Payment Amount</div>
+
+    <div style="display:none;" data-carloanform="6"></div>
+  </div>
+  <input type="hidden" id="cal_LoanRate6" value="6.89%">
+  <input type="hidden" id="cal_LoanTerm6" value="84">
+  [/IFNOTBLANK:BIT_FIELD_C6ENABLE] 
+
+ -->
+
+                                                            <!-- the following div is initially hidden but will be shown once the user has interacted with the widget -->
+
+                                                            <div class="post-interaction" data-perstag-scripted="2" data-bid="174" style="display:block;">
+                                                                <p><a href="{% url 'accounts:login' %}" class="button button11 JQnewWindow" data-linktype="ext">Apply for this Loan</a>                                                                    <a href="{% url 'contact_us' %}" class="button button2 " data-linktype="site">Talk to Us About an Auto Loan</a></p>
+                                                            </div>
+
+                                                        </div>
+
+
+                                                    </div>
+                                                    <div class="calc-disclaimer">Information and interactive calculators are made available to you as self-help tools for your independent use and are not intended to provide investment advice. We cannot and do not guarantee their applicability
+                                                        or accuracy in regards to your individual circumstances. All examples are hypothetical and are for illustrative purposes regarding all personal finance issues. Rates, conditions, and terms may vary
+                                                        based on an individual’s credit worthiness and credit union underwriting guidelines.</div>
+                                                </p>
+                                            </div>
+                                            <div class="clear"></div>
+
+
+
+
+
+
+                                            <div class="clear"></div>
+
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </p>
+                        <p>
+                            <div class="contentdeck two-column-text-image  txt-dark  photo-align-right ">
+                                <div class="clearfix">
+                                    <div class="deckinner deck-distinct no-padding-bottom  txt-dark">
+                                        <div class=" multicol2">
+                                            <div class="multicol-inner fix">
+
+                                                <div class="feature-img"><img src="{% static 'assetzz/content/images/original/Americas-Auto-Loans-6.jpg' %}" alt="" loading="lazy"></div>
+
+
+                                            </div>
+                                        </div>
+                                        <div class="multicol1">
+                                            <div class="multicol-inner inner fix">
+
+
+
+                                                <h3>Trading up or ready to purchase? Here&rsquo;s what to expect from us:</h3>
+                                                <p>
+                                                    <div class="refreshed-step-list listcols-">
+
+                                                        <div class="distinct-box-col">
+                                                            <ul class="step-list fix listcolwidth- colleft steplines">
+
+                                                                <li>
+                                                                    <div class="step-title">Get expert advice on negotiating your trade-in value and purchase price.</div><span></span></li>
+
+
+                                                                <li>
+                                                                    <div class="step-title">We review all dealership paperwork, so you only get what you want!</div><span></span></li>
+
+
+
+                                                                <li>
+                                                                    <div class="step-title">Options for GAP, extended warranties, and family protection!</div><span></span></li>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                                                            </ul>
+
+                                                        </div>
+
+                                                    </div>
+                                                </p>
+                                                <h3>Want to lower your current payment or rate from another financial institution? We have options for you!</h3>
+                                                <p>
+                                                    <div class="refreshed-step-list listcols-">
+
+                                                        <div class="distinct-box-col">
+                                                            <ul class="step-list fix listcolwidth- colleft steplines">
+
+                                                                <li>
+                                                                    <div class="step-title">We’ll help you personalize your loan to fit your needs.</div><span></span></li>
+
+
+                                                                <li>
+                                                                    <div class="step-title">We'll work within your budget.</div><span></span></li>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                                                            </ul>
+
+                                                        </div>
+
+                                                    </div>
+                                                </p>
+
+                                            </div>
+                                            <div class="clear"></div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="contentdeck bg-color-transparent txt-dark    onewhole    fix clear">
+                                <div class="banner-overlay clearfix">
+                                    <div class="deckinner fix no-padding" style="margin:auto;">
+                                        <div class="multicol-inner txt-dark">
+                                            <div class="deck-title h2-style  txt-center txt-dark " role="heading" aria-level="2">Auto Loan Extras</div>
+
+
+                                            <div class="multicol-intro fix">
+                                                <p style="text-align: center;">Check things out. Kick the tires. Give us a call if you have questions.</p>
+                                                <p>
+                                                    <div class="slick-slider carousel-extras">
+
+
+                                                        <div class="slick-content">
+                                                            <div class="container">
+                                                                <!-- extras item 1 -->
+                                                                <div class="card h-100 bg-color-blue">
+                                                                    <div class="card-img-top extras-image"><img src="{% static 'assetzz/content/images/original/Auto-Loans---Extended-Warranty-Extras.jpg' %}" alt=""></div>
+                                                                    <div class="card-body">
+                                                                        <div class="extras-text txt-light"><a href="{% url 'accounts:login' %}" class=" JQtrack" data-cat="Extras Carousel" data-label="Car & Truck Loan - Extras">Extended Car Warranty Protection</a></div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+
+
+
+                                                        <div class="slick-content">
+                                                            <div class="container">
+                                                                <!-- extras item 2 -->
+                                                                <div class="card h-100 bg-color-blue">
+                                                                    <div class="card-img-top extras-image"><img src="{% static 'assetzz/content/images/original/Auto-Loans---GAP-Extras.jpg' %}" alt=""></div>
+                                                                    <div class="card-body">
+                                                                        <div class="extras-text txt-light"><a href="{% url 'accounts:login' %}" class=" JQtrack" data-cat="Extras Carousel" data-label="Car & Truck Loan - Extras">Guaranteed Auto Protection (GAP)</a></div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+
+
+                                                        <div class="slick-content">
+                                                            <div class="container">
+                                                                <!-- extras item 3 -->
+                                                                <div class="card h-100 bg-color-blue">
+                                                                    <div class="card-img-top extras-image"><img src="{% static 'assetzz/content/images/original/Auto-Loans---Make-a-loan-payment-extras.jpg' %}" alt=""></div>
+                                                                    <div class="card-body">
+                                                                        <div class="extras-text txt-light"><a href="{% url 'accounts:login' %}" class=" JQtrack" data-cat="Extras Carousel" data-label="Car & Truck Loan - Extras">Make an auto loan payment</a></div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+
+
+
+
+
+
+
+
+                                                    </div>
+
+                                                </p>
+                                            </div>
+                                            <div class="clear"></div>
+
+
+
+
+
+
+                                            <div class="clear"></div>
+
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="contentdeck two-column-text-image bg-color-icyblue txt-dark  photo-align-right ">
+                                <div class="clearfix">
+                                    <div class="deckinner deck-distinct  bg-color-icyblue txt-dark">
+                                        <div class=" multicol2">
+                                            <div class="multicol-inner fix">
+
+                                                <div class="feature-img"><img src="{% static 'assetzz/content/images/original/auto-loans---ebook.jpg' %}" alt="" loading="lazy"></div>
+
+
+                                            </div>
+                                        </div>
+                                        <div class="multicol1">
+                                            <div class="multicol-inner inner fix">
+
+                                                <div class="deck-title  " role="heading">Car Loans 101: Car and Truck Buying Made Easy</div>
+
+
+
+                                                <p><span class="intro">Learn how with our free budgeting eBook.</span></p>
+                                                <ul>
+                                                    <li>Find the best car and loan for you</li>
+                                                    <li>Select the best used car and loan</li>
+                                                    <li>Use an auto loan calculator for easy comparisons</li>
+                                                    <li>Refinance your car loan from another lender. Ask us!</li>
+                                                </ul>
+                                                <p><a href="https://www.americascu.org/content/docs/Americas-Credit-Union-Car-Buying-Made-Easy.pdf" class="button button3 JQnewWindow" data-linktype="doc">Download our Car Loans 101 Guide</a></p>
+                                                <p></p>
+
+                                            </div>
+                                            <div class="clear"></div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="page-inner fix">
+                <div class=" content content3 fix clear cimg-container">
+                    <div class="inner">
+
+
+                    </div>
+                </div>
+            </div>
+
+            <!-- end fullwidth -->
+        </div>
+        <!--end wrapper_inner-->
+    </div>
+
+
+
+{% include "core/footer.html" %}

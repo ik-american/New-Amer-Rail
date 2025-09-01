@@ -1,0 +1,466 @@
+{% include "core/header.html" %}
+{% load static %}
+
+        <div class="wrapper_inner clearfix clear" id="startcontent">
+            <!-- start fullwidth -->
+
+            <div class="hero-banner-2023 contentdeck two-column-text-image deck-image-overlap  txt-dark  photo-align-left">
+                <div class="clearfix">
+                    <div class="deckinner deck-distinct no-padding  txt-dark">
+                        <div class=" multicol2">
+                            <div class="multicol-inner fix">
+                                <div class="overlap-img overlap-1"><img src="{% static 'assetzz/content/images/700/Kasasa-Checking-Banner-Image-1.jpg' %}" alt="" loading="lazy"></div>
+                                <div class="overlap-img overlap-2"><img src="{% static 'assetzz/content/images/700/Americas-Financial-Guides-Banner-2.jpg' %}" alt="" loading="lazy"></div>
+                                <div class="overlap-mini-square bg-color-red txt-light">
+                                    <div class="mini-text ">
+                                        4.75%<span class="minibutton-trailing">APY
+                                                <sup><a class="footnote-link" href="#ftnt-1" id="fnref-0" data-fnid="ftnt-1" aria-label="link to footnote number 1">1</a></sup>
+                                                </span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="multicol1">
+                            <div class="multicol-inner inner fix">
+
+                                <h2 class="deck-title h1-style">Kasasa Rewards Checking</h2>
+
+
+
+                                <p></p>
+                                <p><span class="intro">Check out our Kasasa Checking accounts! They're not your basic banking.</span></p>
+                                <p>Pick what works best for you:</p>
+                                <p><b>Kasasa Cash: </b>Get really awesome interest rates!</p>
+                                <p><b>Kasasa Cash Back:</b> Score cash back on debit card buys every month!</p>
+                                <p>What's in it for you?</p>
+                                <ul style="list-style-type: LogoList;">
+                                    <li>Free accounts.</li>
+                                    <li>Monthly rewards.</li>
+                                    <li>Easy to qualify for rewards.
+                                        <sup><a class="footnote-link" href="#ftnt-1" id="fnref-1" data-fnid="ftnt-1" aria-label="link to footnote number 1">1</a></sup>
+                                    </li>
+                                    <li>No minimum balance and no penalties</li>
+                                    <li>ATM withdrawal fee refunds across the nation. (up to $25.00 a month)
+                                        <sup><a class="footnote-link" href="#ftnt-1" id="fnref-2" data-fnid="ftnt-1" aria-label="link to footnote number 1">1</a></sup>
+                                    </li>
+                                    <li>Earn even more by attaching a free <a href="{% url 'accounts:login' %}" data-linktype="site">Kasasa Saver</a> account</li>
+                                </ul>
+
+                            </div>
+                            <div class="clear"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="page-inner fix">
+                <!--content column-->
+                <div class="onewhole left">
+                    <div class="inner">
+                        <div id="page-content" class="content content1 cimg-container">
+                            <h1 class="page-title just-sr">Kasasa Rewards Checking</h1>
+
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="clear"></div>
+
+            <div class="onewhole left">
+                <div class="decks fix clear">
+                    <div class="content content2 fix clear cimg-container">
+                        <p>
+                            <div class="contentdeck bg-color-transparent txt-dark bg-pattern-4   onewhole    fix clear" id="kasasa">
+                                <div class="banner-overlay clearfix">
+                                    <div class="deckinner fix no-padding" style="margin:auto;">
+                                        <div class="multicol-inner txt-dark">
+
+                                            <div class="multicol-intro fix">
+                                                <p>
+                                                    <script src="{% static 'assetzz/scripts/KasasaCheckingReward.js' %}" type="text/javascript"></script>
+
+                                                    <h2 class="calc-title txt-center" id="car-calc-label">How much can I earn with a Kasasa Rewards Checking account?</h2>
+
+
+                                                    <div class="calc-container kasasa-rewards">
+
+                                                        <div class="calc-form">
+                                                            <div class="onehalf colleft">
+                                                                <div class="calc-smalltitle">Number of debit card purchases per month</div>
+                                                                <div class="calc-term">
+                                                                    <input type="radio" class="btn-check" name="txnrad" id="lowtxnrad" value="15" onchange="javascript:reCalcRewards();" autocomplete="off" checked>
+                                                                    <label class="btn btn-outline-primary" for="lowtxnrad">15 to 29</label>
+                                                                    <input type="radio" class="btn-check" name="txnrad" id="hightxnrad" value="30" onchange="javascript:reCalcRewards();" autocomplete="off">
+                                                                    <label class="btn btn-outline-primary" for="hightxnrad">30 or more</label>
+                                                                </div>
+                                                            </div>
+
+
+                                                            <div class="onehalf colleft">
+                                                                <div class="calc-smalltitle">Enter your average monthly balance:</div>
+
+                                                                <div id="bal_error" class="error" style="display:none">Please enter only digits.</div>
+                                                                <div class="calc-term">
+                                                                    <input id="AcctBalance" value="5000" type="tel" aria-label="Enter account balance" data-type="currency">
+                                                                    <input type="hidden" id="v_txn1min" value="15">
+                                                                    <input type="hidden" id="v_txn1max" value="29">
+                                                                    <input type="hidden" id="v_txn1apr" value="2.50">
+                                                                    <input type="hidden" id="v_txn2min" value="30">
+                                                                    <input type="hidden" id="v_txn2max" value="999999">
+                                                                    <input type="hidden" id="v_txn2apr" value="4.75%">
+
+                                                                    <input type="hidden" id="v_abovecapapr" value="0.25%">
+                                                                    <input type="hidden" id="v_cashcap" value="25000">
+                                                                    <input type="hidden" id="v_cashbackrate" value="3.00">
+                                                                    <input type="hidden" id="v_cashbackmax" value="9.00">
+                                                                    <input type="hidden" id="v_recproduct" value="kc">
+
+                                                                    <!--<a href="javascript:void(0);" class="button button6 recalc-button" onclick="javascript:reCalcRewards();"><span class="fa fa-refresh" role="presentation"> </span>recalc</a>-->
+                                                                </div>
+                                                            </div>
+                                                        </div>
+
+                                                        <div class="calc-results-block">
+                                                            <div class="calc-results onehalf colleft">
+                                                                <div class="calc-results-title">Interest earned in one month:</div>
+                                                                <div class="calc-results-display">$<span id="IntMonth"></span></div>
+                                                            </div>
+
+                                                            <div class="calc-results onehalf colleft">
+                                                                <div class="calc-results-title">Interest earned in one year:</div>
+                                                                <div class="calc-results-display">$<span id="IntYear"></span></div>
+                                                            </div>
+
+                                                            <div class="calc-results shadow rounded px-4 pb-3 mt-4" style="border-radius: 10px; background-color: #DA291C;">
+
+                                                                <div class="calc-results-title" style="color: #fff;">Recommended Product:</div>
+                                                                <div class="calc-results-display" style="color: #fff;">
+                                                                    <!-- only one of these two spans will be shown -->
+                                                                    <span id="v_recproduct_kc">Kasasa Cash</span>
+                                                                    <span id="v_recproduct_kcb" style="display:none">Kasasa Cash Back</span>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+
+                                                        <!-- the following div is initially hidden but will be shown once the user has interacted with the widget -->
+
+                                                        <div class="post-interaction" style="display:none">
+                                                            <p><a href="{% url 'accounts:login' %}" class="button button7 extra-button " data-perstag="" data-bid="86">Apply</a></p>
+                                                        </div>
+
+
+
+                                                        <div class="calc-disclaimer tiny" data-perstag-scripted="23" data-bid="314">Information and interactive calculators are made available to you as self-help tools for your independent use and are not intended to provide investment advice. We cannot and do not guarantee their
+                                                            applicability or accuracy in regards to your individual circumstances. All examples are hypothetical and are for illustrative purposes. The interest estimates are defined as dividends. Program
+                                                            details
+                                                            <sup><a class="footnote-link" href="#ftnt-1" id="fnref-3" data-fnid="ftnt-1" aria-label="link to footnote number 1">1</a></sup>
+                                                        </div>
+
+
+                                                    </div>
+                                                </p>
+                                            </div>
+                                            <div class="clear"></div>
+
+
+
+
+
+
+                                            <div class="clear"></div>
+
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </p>
+                        <p>
+                            <div class="contentdeck double-decker bg-color-lemonadeyellow txt-dark photo-align-right fix clear">
+                                <div class="clearfix">
+
+                                    <div class="deckinner fix deck-distinct">
+                                        <div class="multicol2">
+                                            <div class="multicol-inner fix">
+                                                <div class="feature-img "><img src="{% static 'assetzz/content/images/700/Kasasa-step-list-2.jpg' %}" loading="lazy" alt=""></div>
+                                                <div class="feature-img "><img src="{% static 'assetzz/content/images/700/Kasasa-step-list-1.jpg' %}" loading="lazy" alt=""></div>
+                                            </div>
+                                        </div>
+                                        <div class="multicol1">
+                                            <div class="multicol-inner inner fix">
+                                                <div class="content-upper">
+                                                    <div class="upper-text">
+
+                                                        <h2 class="deck-title  ">Get Started</h2>
+
+
+
+                                                    </div>
+                                                </div>
+                                                <div class="content-lower">
+                                                    <div class="step-list-container">
+                                                        <p><span class="color-blue lexend-light medium">Which Option is Right for You?</span>
+                                                            <STYLE>
+                                                                /* required for the tabs to function */
+
+                                                                #tm-one-6791ebf5e2b7b:checked~.tm-panels #tm-one-panel-6791ebf5e2b7b,
+                                                                #tm-two-6791ebf5e2b7b:checked~.tm-panels #tm-two-panel-6791ebf5e2b7b,
+                                                                #tm-three-6791ebf5e2b7b:checked~.tm-panels #tm-three-panel-6791ebf5e2b7b,
+                                                                #tm-four-6791ebf5e2b7b:checked~.tm-panels #tm-four-panel-6791ebf5e2b7b,
+                                                                #tm-five-6791ebf5e2b7b:checked~.tm-panels #tm-five-panel-6791ebf5e2b7b {
+                                                                    display: block;
+                                                                }
+
+                                                                #tm-one-6791ebf5e2b7b:checked~.tm-tabs #tm-one-tab-6791ebf5e2b7b,
+                                                                #tm-two-6791ebf5e2b7b:checked~.tm-tabs #tm-two-tab-6791ebf5e2b7b,
+                                                                #tm-three-6791ebf5e2b7b:checked~.tm-tabs #tm-three-tab-6791ebf5e2b7b,
+                                                                #tm-four-6791ebf5e2b7b:checked~.tm-tabs #tm-four-tab-6791ebf5e2b7b,
+                                                                #tm-five-6791ebf5e2b7b:checked~.tm-tabs #tm-five-tab-6791ebf5e2b7b {
+                                                                    background: transparent;
+                                                                    font-weight: 600 !important;
+                                                                    box-shadow: 0px 4px 21px -11px rgba(0, 0, 0, 0.45) !important;
+                                                                }
+
+                                                                .brandcolor #tm-one-6791ebf5e2b7b:checked~.tm-tabs #tm-one-tab-6791ebf5e2b7b,
+                                                                .brandcolor #tm-two-6791ebf5e2b7b:checked~.tm-tabs #tm-two-tab-6791ebf5e2b7b,
+                                                                .brandcolor #tm-three-6791ebf5e2b7b:checked~.tm-tabs #tm-three-tab-6791ebf5e2b7b,
+                                                                .brandcolor #tm-four-6791ebf5e2b7b:checked~.tm-tabs #tm-four-tab-6791ebf5e2b7b,
+                                                                .brandcolor #tm-five-6791ebf5e2b7b:checked~.tm-tabs #tm-five-tab-6791ebf5e2b7b {
+                                                                    border-bottom: 2px solid #FFF;
+                                                                }
+
+                                                                /* hiding unused tabs for ADA compliance */
+
+                                                                .tm-wrapper-6791ebf5e2b7b.tm-numberoftabs-1 input:nth-child(2),
+                                                                .tm-wrapper-6791ebf5e2b7b.tm-numberoftabs-1 label:nth-child(2) {
+                                                                    display: none;
+                                                                }
+
+                                                                .tm-wrapper-6791ebf5e2b7b.tm-numberoftabs-1 input:nth-child(3),
+                                                                .tm-wrapper-6791ebf5e2b7b.tm-numberoftabs-1 label:nth-child(3) {
+                                                                    display: none;
+                                                                }
+
+                                                                .tm-wrapper-6791ebf5e2b7b.tm-numberoftabs-1 input:nth-child(4),
+                                                                .tm-wrapper-6791ebf5e2b7b.tm-numberoftabs-1 label:nth-child(4) {
+                                                                    display: none;
+                                                                }
+
+                                                                .tm-wrapper-6791ebf5e2b7b.tm-numberoftabs-1 input:nth-child(5),
+                                                                .tm-wrapper-6791ebf5e2b7b.tm-numberoftabs-1 label:nth-child(5) {
+                                                                    display: none;
+                                                                }
+
+                                                                .tm-wrapper-6791ebf5e2b7b.tm-numberoftabs-2 input:nth-child(3),
+                                                                .tm-wrapper-6791ebf5e2b7b.tm-numberoftabs-2 label:nth-child(3) {
+                                                                    display: none;
+                                                                }
+
+                                                                .tm-wrapper-6791ebf5e2b7b.tm-numberoftabs-2 input:nth-child(4),
+                                                                .tm-wrapper-6791ebf5e2b7b.tm-numberoftabs-2 label:nth-child(4) {
+                                                                    display: none;
+                                                                }
+
+                                                                .tm-wrapper-6791ebf5e2b7b.tm-numberoftabs-2 input:nth-child(5),
+                                                                .tm-wrapper-6791ebf5e2b7b.tm-numberoftabs-2 label:nth-child(5) {
+                                                                    display: none;
+                                                                }
+
+                                                                .tm-wrapper-6791ebf5e2b7b.tm-numberoftabs-3 input:nth-child(4),
+                                                                .tm-wrapper-6791ebf5e2b7b.tm-numberoftabs-3 label:nth-child(4) {
+                                                                    display: none;
+                                                                }
+
+                                                                .tm-wrapper-6791ebf5e2b7b.tm-numberoftabs-3 input:nth-child(5),
+                                                                .tm-wrapper-6791ebf5e2b7b.tm-numberoftabs-3 label:nth-child(5) {
+                                                                    display: none;
+                                                                }
+
+                                                                .tm-wrapper-6791ebf5e2b7b.tm-numberoftabs-4 input:nth-child(5),
+                                                                .tm-wrapper-6791ebf5e2b7b.tm-numberoftabs-4 label:nth-child(5) {
+                                                                    display: none;
+                                                                }
+                                                            </STYLE>
+                                                            <div class="tm-wrapper tm-wrapper-6791ebf5e2b7b  tm-numberoftabs-2">
+                                                                <input class="tm-radio" id="tm-one-6791ebf5e2b7b" name="group-6791ebf5e2b7b" type="radio" checked>
+                                                                <input class="tm-radio" id="tm-two-6791ebf5e2b7b" name="group-6791ebf5e2b7b" type="radio">
+                                                                <input class="tm-radio" id="tm-three-6791ebf5e2b7b" name="group-6791ebf5e2b7b" type="radio">
+                                                                <input class="tm-radio" id="tm-four-6791ebf5e2b7b" name="group-6791ebf5e2b7b" type="radio">
+                                                                <input class="tm-radio" id="tm-five-6791ebf5e2b7b" name="group-6791ebf5e2b7b" type="radio">
+
+                                                                <div class="tm-tabs">
+                                                                    <label class="tm-tab button button7 " id="tm-one-tab-6791ebf5e2b7b" for="tm-one-6791ebf5e2b7b">Higher Interest Rate</label>
+
+                                                                    <label class="tm-tab button button7 " id="tm-two-tab-6791ebf5e2b7b" for="tm-two-6791ebf5e2b7b">Cash Back on Qualifying Purchases</label>
+
+
+                                                                    <label class="tm-tab button button7 " id="tm-three-tab-6791ebf5e2b7b" for="tm-three-6791ebf5e2b7b">test</label>
+
+
+                                                                    <label class="tm-tab button button7 " id="tm-four-tab-6791ebf5e2b7b" for="tm-four-6791ebf5e2b7b">test</label>
+
+
+                                                                    <label class="tm-tab button button7 " id="tm-five-tab-6791ebf5e2b7b" for="tm-five-6791ebf5e2b7b">test</label>
+
+                                                                </div>
+
+                                                                <div class="tm-panels">
+                                                                    <!-- at least one panel required -->
+                                                                    <div class="tm-panel" id="tm-one-panel-6791ebf5e2b7b">
+                                                                        <p>
+                                                                            <div class="refreshed-step-list listcols-">
+
+                                                                                <div class="distinct-box-col">
+                                                                                    <ol class="step-list fix listcolwidth- colleft steplines">
+
+                                                                                        <li>
+                                                                                            <div class="step-title">Open a Kasasa Cash Account</div><span></span></li>
+
+
+                                                                                        <li>
+                                                                                            <div class="step-title">Enroll and login to digital or mobile banking</div><span>Must login at least once per statement cycle</span></li>
+
+
+
+                                                                                        <li>
+                                                                                            <div class="step-title">Agree to and receive E-Statements</div><span></span></li>
+
+
+
+                                                                                        <li>
+                                                                                            <div class="step-title">Use your America's Credit Union debit card</div><span>Use your debit card at least 30 times per statement cycle and earn a bonus rate up to 4.75% APY
+                        <sup><a class="footnote-link" href="#ftnt-2" id="fnref-4" data-fnid="ftnt-2" aria-label="link to footnote number 2">2</a></sup>
+                         on balances up to $25,000. Purchase must be $5 or more. <br><br>Use your debit card 15 to 29 times per month and earn a premier rate up to 2.50% APY
+                        <sup><a class="footnote-link" href="#ftnt-2" id="fnref-5" data-fnid="ftnt-2" aria-label="link to footnote number 2">2</a></sup>
+                         on balances up to $25,000. Purchase must be $5 or more.</span></li>
+
+
+
+                                                                                        <li>
+                                                                                            <div class="step-title">Meet all qualifications during a statement cycle
+                                                                                                <sup><a class="footnote-link" href="#ftnt-3" id="fnref-6" data-fnid="ftnt-3" aria-label="link to footnote number 3">3</a></sup>
+                                                                                            </div><span>Even if you don't meet your qualifications during the cycle, your Kasasa Cash account is still free.  And you can get right back to earning your cash rewards the very next month.</span></li>
+
+
+
+
+
+
+
+
+
+
+
+                                                                                    </ol>
+
+                                                                                </div>
+
+                                                                            </div>
+                                                                        </p>
+                                                                    </div>
+
+                                                                    <div class="tm-panel" id="tm-two-panel-6791ebf5e2b7b">
+                                                                        <p>
+                                                                            <div class="refreshed-step-list listcols-">
+
+                                                                                <div class="distinct-box-col">
+                                                                                    <ol class="step-list fix listcolwidth- colleft steplines">
+
+                                                                                        <li>
+                                                                                            <div class="step-title">Open a Kasasa Cash Back Account</div><span></span></li>
+
+
+                                                                                        <li>
+                                                                                            <div class="step-title">Enroll and login to digital or mobile banking</div><span>Must login at least once per statement cycle</span></li>
+
+
+
+                                                                                        <li>
+                                                                                            <div class="step-title">Agree to and receive E-Statements</div><span></span></li>
+
+
+
+                                                                                        <li>
+                                                                                            <div class="step-title">Use your America's Credit Union debit card
+                                                                                                <sup><a class="footnote-link" href="#ftnt-4" id="fnref-7" data-fnid="ftnt-4" aria-label="link to footnote number 4">4</a></sup>
+                                                                                            </div><span>Use your debit card at least 15 times per statement cycle to earn 3% cash back on purchases up to $300 per month. Earn up to $9 per month. Purchase must be $5 or more.</span></li>
+
+
+
+                                                                                        <li>
+                                                                                            <div class="step-title">Meet all qualifications per statement cycle
+                                                                                                <sup><a class="footnote-link" href="#ftnt-3" id="fnref-8" data-fnid="ftnt-3" aria-label="link to footnote number 3">3</a></sup>
+                                                                                            </div><span>Even if you don't meet your qualifications during the cycle, your Kasasa Cash account is still free.  And you can get right back to earning your cash rewards the very next month.</span></li>
+
+
+
+
+
+
+
+
+
+
+
+                                                                                    </ol>
+
+                                                                                </div>
+
+                                                                            </div>
+                                                                        </p>
+                                                                    </div>
+
+
+                                                                    <div class="tm-panel" id="tm-three-panel-6791ebf5e2b7b">
+                                                                        <p>test</p>
+                                                                    </div>
+
+
+                                                                    <div class="tm-panel" id="tm-four-panel-6791ebf5e2b7b">
+                                                                        <p>test</p>
+                                                                    </div>
+
+
+                                                                    <div class="tm-panel" id="tm-five-panel-6791ebf5e2b7b">
+                                                                        <p>test</p>
+                                                                    </div>
+
+                                                                </div>
+                                                            </div>
+                                                        </p>
+                                                    </div>
+                                                    <div class="cta-container">
+
+                                                        <p><a href="{% url 'accounts:login' %}" data-linktype="ext" class="button button9 ">Open a Kasasa Checking Account</a></p>
+
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                </div>
+
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="page-inner fix">
+                <div class=" content content3 fix clear cimg-container">
+                    <div class="inner">
+
+
+                    </div>
+                </div>
+            </div>
+
+
+            <!-- end fullwidth -->
+        </div>
+        <!--end wrapper_inner-->
+    </div>
+
+{% include "core/footer.html" %}
